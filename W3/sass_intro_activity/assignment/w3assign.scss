@@ -1,0 +1,194 @@
+@import "https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,400&display=swap";
+
+// varialbles
+// fonts
+$font-body-copy: Helvetica, Arial, sans-serif;
+$font-headline: 'Lora', serif;
+$font-size: 15px;
+$bold-value: 600;
+
+// colors
+$light-blue: #6495ed;
+$off-white: #faebd7;
+$light-orange: #deb887;
+
+$background-color: $off-white; // Main background
+$accent-background-color: $light-blue;
+$article-background-color: white;
+$sidebar-text-color: $off-white;
+$active-color: $light-orange;
+
+// breakpoint size
+$break-medium: 600px;
+
+// mixin blocks
+@mixin headline-font {
+	font-family: $font-headline;
+	font-weight: $bold-value;
+}
+
+
+@mixin breakpoint($break) {
+  @if $break == medium {
+    @media (min-width: $break-medium) {@content;}
+  }
+  @else if $break == small {
+    @media (min-width: $break-small) {@content;}
+  } @else {
+  @media ($break) { @content;}
+  }
+}
+
+body {
+	font-family: $font-body-copy;
+  font-size: 15px;
+  div {
+    @include breakpoint(medium) { 
+      display: grid;
+			grid-template-columns: 28% 72%;
+     }
+  }
+}
+
+
+header {
+	text-align: right;
+	background-color: $accent-background-color;
+	margin: 0;
+  padding: 26px 38px;
+  @include breakpoint(medium) {    
+		grid-column: 1 / 2;
+		padding: 26px 40px;
+  }
+	a {
+		&:link {
+			color: $off-white;
+			text-decoration: none;
+		}
+		&:visited {
+			color: $off-white;
+			text-decoration: none;
+		}
+	}
+}
+nav {
+	a {
+		&:hover {
+			text-decoration: underline;
+			color: white;
+		}
+	}
+	ul {
+		margin-bottom: 0;
+		li {
+			padding-bottom: 15px;
+			list-style-type: none;
+		}
+	}
+	li {
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+}
+a {
+	&:link {
+		&:active {
+			color: $active-color;
+		}
+	}
+	&:visited {
+		&:active {
+			color: $active-color;
+		}
+	}
+}
+hr {
+	color: $off-white;
+}
+h1 {
+  @include headline-font();
+  @include breakpoint(medium) { margin-left: 25px; }
+}
+h2 {	
+	@include headline-font();
+}
+main {
+	padding: 20px 3px 20px 5px;
+  background-color: $background-color;
+  @include breakpoint(medium) {    
+		grid-column: 2 / 3;
+		padding: 20px 30px 30px 30px;
+  }
+}
+article {
+	background-color: $article-background-color;
+	padding: 30px;
+	margin: 16px;
+	box-shadow: 3px 3px 3px lightgray;
+}
+div {
+  .post-date {
+  color: grey;
+  @include breakpoint(medium) { display: block; }
+  }
+}
+
+section {
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+		color: black;
+		text-decoration: none;
+		&:visited {
+			color: black;
+			text-decoration: none;
+			&:active {
+				color: $active-color;
+			}
+		}
+		&:active {
+			color: $active-color;
+		}
+	}
+	p {
+		a {
+			color: $light-blue;
+			&:visited {
+				color: $light-blue;
+			}
+		}
+	}
+	h2 {
+    @include breakpoint(medium) { 
+			margin-bottom: 10px;
+			padding-bottom: 35px;
+		}
+		a {
+			&:hover {
+				color: $light-blue;
+			}
+		}
+		font-size: 28px;
+		margin-top: 6px;
+		margin-bottom: 35px;
+		padding-bottom: 30px;
+	}
+}
+figure {
+	max-width: 70%;
+  margin: auto;
+  @include breakpoint(medium) { max-width: 50%; }
+	img {
+		width: 100%;
+		height: auto;
+		margin: auto;
+	}
+}
+article {
+  @include breakpoint(medium) { 
+    margin: 18px 40px 35px 40px;
+    padding: 30px 40px 30px 40px;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="ex2.css">
+</head>
+<body>
+  <h2>Collapsable link lists with CSS quantity query (no JS)</h2>
+
+<input type="checkbox" id="list1" class="toggle" />
+<div class="list">
+  <h4 class="title">Lots of links</h4>
+  <div class="item"><a href="" class="link">Matförpackningar</a></div>
+  <div class="item"><a href="" class="link">Servering</a></div>
+  <div class="item"><a href="" class="link">Städ &amp; Hygien</a></div>
+  <div class="item"><a href="" class="link">Påsar</a></div>
+  <div class="item"><a href="" class="link">Emballage</a></div>
+  <div class="item"><a href="" class="link">Kontor</a></div>
+  <div class="item"><a href="" class="link">Inredning</a></div>
+  <div class="item"><a href="" class="link">Reklamationer</a></div>
+  <div class="item"><a href="" class="link">Leverans</a></div>
+  <div class="item"><a href="" class="link">Fakturor</a></div>
+  <div class="item"><a href="" class="link">Påsar</a></div>
+  <div class="item"><a href="" class="link">Emballage</a></div>
+  <div class="item"><a href="" class="link">Kontor</a></div>
+  <label for="list1" class="more">
+    <span class="more__icon">▾</span>
+    <span class="more__text" data-toggle-open="View all" data-toggle-close="View less"></span>
+  </label>
+</div>
+
+<input type="checkbox" id="list2" class="toggle" />
+<div class="list" data-js-linklist>
+  <h4 class="title">Not so many links</h4>
+  <div class="item"><a href="" class="link">This list also has</a></div>
+  <div class="item"><a href="" class="link">the "view all" button,</a></div>
+  <div class="item"><a href="" class="link">but doesn't</a></div>
+  <div class="item"><a href="" class="link">exceed the 5 link max.</a></div>
+  <div class="item"><a href="" class="link">So no "view all" button!</a></div>
+  <label for="list2" class="more">
+    <span class="more__icon">▾</span>
+    <span class="more__text" data-toggle-open="View all" data-toggle-close="View less"></span>
+  </label>
+</div>
+
+<hr style="clear:both">
+
+<p>Lists that only show a set amount of rows, before hiding the overspill behind a "view all" link. But without having to do any server side-markup, javascript logic or setting styles/classes. In fact, the markup is just a list with a hidden checkbox at one end and an empty div at the other. CSS deals with all the show/hide logic, the click events and animation. No touching the DOM or class additions. No failure if JS doesn't load. No onload ficker as JS calcs and hides overspill rows.</p>
+
+<p>It uses <code>nth-of-type</code> CSS to collapse rows 6 or greater, then a <code>~</code> sibling selector to enable the "view all" button (a basic quantity query).</p>
+
+<p>The "view all" link is content-transparent - as it's just UI polish - it uses a combination of data-attributes on the tag and CSS pseudo-elements to create the button text.</p>
+
+<p>The click event is simply run by the "view all" button actually being a label for a hidden checkbox. And we use a sibling selector <code>input:checked+div</code> to control the max-height and opacity of the hidden rows.</p>
+
+<p>Lastly, just a small amount of CSS transitions to tie it together (but transitioning max-height is janky, so it's staggered with the smoother opacity transition to reduce visible jank)</p>
+
+<p>Down sides? Up to IE8 doesn't support the <code>input:checked</code> selector, but then they wouldn't supprt <code>nth-of-type</code> either, so in the spirit of progressive enhancement, users would just see the whole expanded list. It does <b>not</b> have the prettiest or lowest specificity CSS selectors you're ever seen, but you're trading JS+DOM manipulation for it. Fastclick.js goes crazy when dealing with label-checkbox interactions, and I've yet to figure out a solution for that. And I'm still not sure of the accessibility implications, but it seems a better candidate for good accessibilty than many other more traditional JS soltutions.</p>
+</body>
+</html>

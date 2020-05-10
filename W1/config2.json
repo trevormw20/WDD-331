@@ -1,0 +1,25 @@
+{
+  "hasOverTime": true,
+  "nameOfPeriod": "Qtr",
+  "clockCountsUp": false,
+  "periodDuration": 720000,
+  "stopTimeCutoff": 120000,
+  "numberOfPeriods": 4,
+  "stopTimePeriods": [
+    2
+  ],
+  "timeoutDuration": 30000,
+  "halfTimeDuration": 600000,
+  "numberOfTimeouts": 2,
+  "overTimeDuration": 600000,
+  "divisionOverrides": [],
+  "hasStopTimeCutoff": true,
+  "passClockDuration": 0,
+  "playClockDuration": 30000,
+  "isRunningGameClock": true,
+  "stopTimeScoreSpread": 24,
+  "timeoutResetsBeginningOf": [
+    1,
+    2
+  ]
+}

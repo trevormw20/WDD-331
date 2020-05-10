@@ -1,0 +1,4 @@
+label:not(.label-radio) {
+  font-weight: bold;
+  display:block;
+  }

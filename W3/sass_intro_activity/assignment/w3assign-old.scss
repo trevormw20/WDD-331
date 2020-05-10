@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,400&display=swap');
+
+// varialbles
+// fonts
+$font-body-copy: Helvetica, Arial, sans-serif;
+$font-headline: 'Lora', serif;
+$font-size: 15px;
+
+// colors
+$light-blue: #6495ed;
+$off-white: #faebd7;
+$light-orange: #deb887;
+
+$background-color: $off-white; // Main background
+$sidebar-background-color: $light-blue;
+$sidebar-text-color: $off-white;
+$active-color: $light-orange;
+
+
+
+body {
+  font-family: $font-body-copy;
+  font-size: $font-size;
+}
+
+header {
+  text-align: right;
+  background-color: $background-color;
+  margin: 0;
+  padding: 26px 38px;
+  a {
+    &:link { 
+      color: $active-color;
+      text-decoration: none;
+    }
+  a:visited {
+    color: $active-color;
+    text-decoration: none;
+  }
+  nav {
+    a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+}
+
+
+
+
+a:link:active, 
+a:visited:active {
+  color: $active-color;
+}
+
+hr {
+  color: #FAEBD7;  
+}
+
+h1, h2 {
+  font-family: $font-headline;
+  font-weight: 600;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+nav ul li {
+  padding-bottom: 15px;
+  list-style-type: none;
+}
+
+nav li:last-of-type {
+  padding-bottom: 0;
+}
+
+main {
+  padding: 20px 3px 20px 5px;
+  background-color: $background-color;
+}
+
+article {
+  background-color: white;
+  padding: 30px;
+  margin: 16px;
+  box-shadow: 3px 3px 3px lightgray;
+}
+
+.post-date {
+  color: grey;
+}
+
+
+section {
+  a:hover {
+    text-decoration: underline;
+  }
+  a,
+section a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+section a:active,
+section a:visited:active {
+  color: $active-color;
+}
+
+section p a,
+section p a:visited,
+section h2 a:hover {
+  color: $light-blue;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-top: 6px;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+}
+
+figure {
+  max-width: 70%;
+  margin: auto;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  
+  body div {
+    display: grid;
+    grid-template-columns: 28% 72%;
+  }
+
+  header {
+    grid-column: 1 / 2;
+    padding: 26px 40px;
+  }
+
+  h1 {
+    margin-left: 25px;
+  }
+
+  main {
+    grid-column: 2 / 3;
+    padding: 20px 30px 30px 30px;
+  }
+
+  div.post-date {
+    display: block;
+  }
+
+  section h2 {
+    margin-bottom: 10px;
+    padding-bottom: 35px;
+  }
+
+  article {
+    margin: 18px 40px 35px 40px;
+    padding: 30px 40px 30px 40px;
+  }
+
+  figure {
+    max-width: 50%;
+  }
+}

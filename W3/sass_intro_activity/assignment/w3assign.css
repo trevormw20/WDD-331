@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,400&display=swap");
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+}
+
+header {
+  text-align: right;
+  background-color: #6495ed;
+  margin: 0;
+  padding: 26px 38px;
+}
+
+header a:link, a:visited {
+  color: #deb887;
+  text-decoration: none;
+}
+
+header nav a:hover,
+section a:hover {
+  text-decoration: underline;
+}
+
+header nav a:hover {
+  color: white;
+}
+
+a:link:active,
+a:visited:active {
+  color: #deb887;
+}
+
+hr {
+  color: #FAEBD7;
+}
+
+h1, h2 {
+  font-family: "Lora", serif;
+  font-weight: 600;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+nav ul li {
+  padding-bottom: 15px;
+  list-style-type: none;
+}
+
+nav li:last-of-type {
+  padding-bottom: 0;
+}
+
+main {
+  padding: 20px 3px 20px 5px;
+  background-color: #6495ed;
+}
+
+article {
+  background-color: white;
+  padding: 30px;
+  margin: 16px;
+  -webkit-box-shadow: 3px 3px 3px lightgray;
+          box-shadow: 3px 3px 3px lightgray;
+}
+
+.post-date {
+  color: grey;
+}
+
+section a,
+section a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+section a:active,
+section a:visited:active {
+  color: #deb887;
+}
+
+section p a,
+section p a:visited,
+section h2 a:hover {
+  color: #6495ed;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-top: 6px;
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+}
+
+figure {
+  max-width: 70%;
+  margin: auto;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  body div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 28% 72%;
+        grid-template-columns: 28% 72%;
+  }
+  header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    padding: 26px 40px;
+  }
+  h1 {
+    margin-left: 25px;
+  }
+  main {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    padding: 20px 30px 30px 30px;
+  }
+  div.post-date {
+    display: block;
+  }
+  section h2 {
+    margin-bottom: 10px;
+    padding-bottom: 35px;
+  }
+  article {
+    margin: 18px 40px 35px 40px;
+    padding: 30px 40px 30px 40px;
+  }
+  figure {
+    max-width: 50%;
+  }
+}
+/*# sourceMappingURL=w3assign.css.map */

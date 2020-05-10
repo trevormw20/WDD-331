@@ -1,0 +1,171 @@
+/** Descendant Combinator */
+form h1 {
+  color: #009;
+}
+
+/** Child Combinator */
+form > p {
+  font-size: 22px;
+}
+
+/** Adjacent Sibling Combinator */
+label + input {
+  display: block;
+  clear: both;
+}
+
+* + fieldset {
+  margin: 5em 0;
+}
+
+/** General Sibling Combinator */
+label ~ input {
+  display: block;
+}
+
+/** Attribute Presence
+The space-separated attribute value selector matches elements with the attribute
+att and a list of values, one of which is val. */
+
+[rel~=friend] {
+  font-size: 2em;
+  background: #eee;
+  padding: 4px;
+  text-decoration: none;
+  border-bottom: 3px solid #ccc;
+  }
+
+[rel~=friend]:link,
+[rel~=friend]:visited {
+  color: #34444C;
+  }
+
+[rel~=friend]:hover{
+  background: #ffeb3b;
+  border-color: #ffc107;
+  }
+
+/** Matching Hyphenated Attribute Values 
+This selector matches elements by attribute when its value is hyphenated and its prefix equals val. */
+
+[lang|="fr"] {
+  font-style: italic;
+  }
+
+[lang|="fr"] q:before{
+  content: '\00AB'; /* Left angle quote */
+  }
+
+[lang|="fr"] q:after{
+  content: '\00BB'; /* Right angle quote */
+  }
+
+/** further limitation */
+p[lang|="fr"] {
+  font-style: italic;
+  }
+
+p[lang|="fr"] q:before{
+  content: '\00AB'; /* Left angle quote */
+  }
+
+p[lang|="fr"] q:after{
+  content: '\00BB'; /* Right angle quote */
+  }
+
+[class|="articlepromo"] {
+  border-top: 5px solid #4caf50;
+  color: #555;
+  line-height: 1.3;
+  padding-top: .5em;
+  }
+
+[class*="-entertainment"] {  /* Using Substring Any Position method *= */
+  border-top: 5px solid #b14175;
+  }
+
+[class$="-sports"] {    /* Using Substring End of string Position method $= */
+  border-top: 5px solid #8414c4;
+  }
+
+[class$="-business"] {    /* Using Substring End of string Position method $= */
+  border-top: 5px solid #18c9f5;
+  }
+
+[class|="articlepromo"] h3 {
+  color: #000;
+  font-size: 1.2em;
+  margin:0;
+  }
+
+[class|="articlepromo"] p {
+  margin: 0 0 1em;
+  }
+
+/* 
+.-entertainment {
+  border-top: 5px solid #b14175;
+  }
+
+.-sports {
+  border-top: 5px solid #8414c4;
+  }
+
+.-business {
+  border-top: 5px solid #18c9f5;
+  } */
+
+[href^="tel:"] {
+  background: #8cbe18 url(images/Call.png) 10px center / 20px auto no-repeat;
+  border-radius: 100px;
+  padding: .5em 1em .5em 2em;
+  color: white;
+  text-decoration: none;
+  }
+
+  /** Pseudo - Classes and Elements 
+  ::before inserts additional generated content before the content of an element
+  ::after inserts additional generated content after the content of an element
+  ::first–letter selects the first letter of an element
+  ::first–line selects the first line of an element
+  ::selection styles text selected by the cursor  */
+
+  .helptext::before {
+    content: '( ';
+    }
+
+  .helptext::after {
+  content: ')';
+  }
+
+  article p:first-of-type::first-letter {
+    font: bold italic 3em / .5 serif;
+    font-style: italic;
+    color: #607d8b;
+    float: left;
+    margin: 0.2em 0.25em .01em 0;
+    }
+
+    .comment:target {
+      background: #ffeb3b;
+      border-color: #ffc107
+      }
+
+[id^=tab] {
+  position: absolute;
+  }
+
+[id^=tab]:first-child {
+  z-index: 1;
+  }
+  
+[id^=tab]:target {
+  z-index: 2;
+  }
+
+:out-of-range {
+  background: #ffeb3b;
+  }
+:in-range {
+  background: #fff;
+  }

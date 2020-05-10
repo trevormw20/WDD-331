@@ -1,0 +1,92 @@
+body {
+  margin: 20px;
+  font-family: avenir,sans-serif;
+}
+
+.toggle {
+  display: none;
+}
+
+.list {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+  margin: 0 20px 20px 0;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.title {
+  margin: 0 0 1em;
+  padding: 0.25em 5px;
+}
+
+.more {
+  display: none;
+  padding: 0.25em 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px dashed #000;
+}
+.more__text:before {
+  content: attr(data-toggle-open);
+}
+.more__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3em;
+  line-height: 0.9;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition-delay: 700ms;
+          transition-delay: 700ms;
+}
+.no-touch .more:hover {
+  background-color: #eee;
+}
+
+.item {
+  overflow: hidden;
+}
+.item:nth-of-type(n+6) {
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: opacity 500ms, max-height 200ms;
+  transition: opacity 500ms, max-height 200ms;
+  -webkit-transition-delay: 0s, 500ms;
+          transition-delay: 0s, 500ms;
+}
+.item:nth-of-type(n+6) ~ .more {
+  display: block;
+}
+.toggle:checked + .list .item:nth-of-type(n+6) {
+  max-height: 4em;
+  opacity: 1;
+  -webkit-transition-delay: 200ms, 0s;
+          transition-delay: 200ms, 0s;
+}
+.toggle:checked + .list .item:nth-of-type(n+6) ~ .more .more__text:before {
+  content: attr(data-toggle-close);
+}
+.toggle:checked + .list .item:nth-of-type(n+6) ~ .more .more__icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.link {
+  display: block;
+  padding: 0.25em 5px;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+.no-touch .link:hover {
+  background-color: #eee;
+}

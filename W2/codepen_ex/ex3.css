@@ -1,0 +1,1097 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+html *,
+body * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  box-sizing: border-box;
+}
+html *::before, html *::after,
+body *::before,
+body *::after {
+  content: "";
+  position: absolute;
+}
+
+.portrait {
+  width: 74.5vmin;
+  height: 93.5vmin;
+  background: transparent;
+  overflow: hidden;
+}
+.portrait .curtain {
+  width: 30vmin;
+  height: 80vmin;
+  background: #1e3fb0;
+  border-bottom-right-radius: 100%;
+  top: -38vmin;
+  left: -57vmin;
+  transform: rotate(5deg);
+}
+.portrait .curtain::before {
+  width: 30vmin;
+  height: 80vmin;
+  background: #1e3fb0;
+  border-bottom-left-radius: 100%;
+  top: -7vmin;
+  right: -56vmin;
+  transform: rotate(-8deg);
+}
+.portrait .hair {
+  width: 28vmin;
+  height: 14vmin;
+  background: #000;
+  top: -63.5vmin;
+  left: -5.5vmin;
+  z-index: 3;
+  border-top-right-radius: 90%;
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 100%;
+  transform: rotate(-21deg);
+}
+.portrait .hair::before {
+  width: 10vmin;
+  height: 10vmin;
+  background: #000;
+  left: 18.5vmin;
+  top: 2.9vmin;
+  border-top-right-radius: 10vmin;
+  border-bottom-right-radius: 10vmin;
+  transform: rotate(-5deg);
+}
+.portrait .hair::after {
+  width: 15vmin;
+  height: 40vmin;
+  background: #000;
+  left: 13.8vmin;
+  top: 9.7vmin;
+  border-top-right-radius: 7.5vmin;
+  transform: rotate(19.5deg);
+  border-bottom-left-radius: 100%;
+}
+.portrait .hair i:nth-of-type(1) {
+  z-index: 3;
+  width: 12vmin;
+  height: 35vmin;
+  background: #000;
+  transform: rotate(21deg);
+  left: 17.9vmin;
+  top: 42vmin;
+  border-top-right-radius: 9vmin;
+}
+.portrait .hair i:nth-of-type(1)::before {
+  width: 2vmin;
+  height: 4vmin;
+  background: #000;
+  top: 34vmin;
+  left: 3.2vmin;
+  transform: rotate(35deg);
+}
+.portrait .hair i:nth-of-type(1)::after {
+  width: 10vmin;
+  height: 12vmin;
+  background: #000;
+  top: 35vmin;
+  left: 3.2vmin;
+  border-top-left-radius: 3vmin;
+}
+.portrait .hair i:nth-of-type(2) {
+  z-index: 3;
+  width: 12vmin;
+  height: 11vmin;
+  background: #000;
+  transform: rotate(19deg) skewY(5deg);
+  top: 98vmin;
+  left: 1.8vmin;
+  border-top-left-radius: 0vmin;
+  border-bottom-left-radius: 80%;
+}
+.portrait .hair i:nth-of-type(2)::before {
+  width: 2vmin;
+  height: 5.5vmin;
+  background: #000;
+  transform: skewY(-5deg);
+  top: -5vmin;
+  border-top-left-radius: 90%;
+}
+.portrait .hair i:nth-of-type(2)::after {
+  width: 2.5vmin;
+  height: 7vmin;
+  background: #000;
+  transform: rotate(-75deg) skewY(-5deg);
+  left: 9vmin;
+  top: 6.7vmin;
+}
+.portrait .hair i:nth-of-type(3) {
+  z-index: 3;
+  width: 6vmin;
+  height: 4vmin;
+  background: #fff;
+  top: 116.4vmin;
+  left: 16.4vmin;
+  transform: rotate(33deg) skewY(5deg) skewX(5deg);
+}
+.portrait .hair i:nth-of-type(3)::before {
+  width: 4.5vmin;
+  height: 21.5vmin;
+  background: #fff;
+  transform: rotate(-10deg) skewX(-5deg);
+  top: -17.3vmin;
+  left: -4.4vmin;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 100%;
+}
+.portrait .hair i:nth-of-type(3)::after {
+  width: 2vmin;
+  height: 2vmin;
+  background: #fff;
+  transform: rotate(-30deg);
+  top: 1.7vmin;
+  left: -0.6vmin;
+}
+.portrait .hair i:nth-of-type(4) {
+  width: 15vmin;
+  height: 27vmin;
+  background: #000;
+  transform: rotate(22deg);
+  top: 12vmin;
+  left: -30.5vmin;
+  border-top-left-radius: 90%;
+}
+.portrait .hair i:nth-of-type(4)::before {
+  width: 14vmin;
+  height: 18vmin;
+  background: #000;
+  top: 17.5vmin;
+  left: -1vmin;
+  transform: skewX(-10deg);
+}
+.portrait .hair i:nth-of-type(4)::after {
+  width: 7vmin;
+  height: 14vmin;
+  background: #000;
+  top: 24vmin;
+  left: -3vmin;
+  border-top-left-radius: 80%;
+  border-bottom-left-radius: 100%;
+  transform: rotate(12deg);
+}
+.portrait .hair i:nth-of-type(5) {
+  width: 5vmin;
+  height: 5vmin;
+  background: #000;
+  transform: rotate(22deg) skewX(-20deg);
+  top: 28vmin;
+  left: -49.5vmin;
+}
+.portrait .hair i:nth-of-type(5)::before {
+  width: 11.8vmin;
+  height: 18vmin;
+  background: #000;
+  top: 7vmin;
+  left: 5.8vmin;
+  transform: rotate(-40deg);
+  border-top-left-radius: 1vmin;
+}
+.portrait .hair i:nth-of-type(5)::after {
+  width: 18vmin;
+  height: 26vmin;
+  background: #000;
+  top: 18vmin;
+  left: 2vmin;
+  transform: rotate(15deg);
+}
+.portrait .hair i:nth-of-type(6) {
+  width: 6vmin;
+  height: 26vmin;
+  background: #fff;
+  transform: rotate(30deg) skewX(-25deg);
+  top: 75vmin;
+  left: -94.5vmin;
+  border-top-right-radius: 5vmin;
+}
+.portrait .hair i:nth-of-type(6)::before {
+  width: 5.5vmin;
+  height: 14vmin;
+  background: #fff;
+  border-top-right-radius: 60%;
+  border-bottom-right-radius: 50%;
+  top: 7vmin;
+  left: 2.3vmin;
+  transform: rotate(58deg) skewX(45deg);
+}
+.portrait .hair i:nth-of-type(6)::after {
+  width: 5vmin;
+  height: 8vmin;
+  background: #fff;
+  border-top-right-radius: 5vmin;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 2vmin;
+  left: 1.65vmin;
+  top: -3vmin;
+  z-index: -1;
+  transform: rotate(22deg) skewX(40deg);
+}
+.portrait .hair i:nth-of-type(7) {
+  width: 30vmin;
+  height: 9vmin;
+  background: #000;
+  top: 101vmin;
+  left: -85vmin;
+  transform: rotate(21deg);
+}
+.portrait .hair i:nth-of-type(7)::before {
+  width: 5vmin;
+  height: 5vmin;
+  background: #fff;
+  transform: rotate(35deg);
+  left: -0.6vmin;
+  top: -2.2vmin;
+}
+.portrait .hair i:nth-of-type(7)::after {
+  width: 5vmin;
+  height: 5vmin;
+  background: #fff;
+  transform: rotate(30deg);
+  left: -1.4vmin;
+  top: -1.4vmin;
+}
+.portrait .hair i:nth-of-type(8) {
+  width: 18vmin;
+  height: 25vmin;
+  background: #000;
+  top: 98vmin;
+  left: -56vmin;
+  transform: rotate(21deg);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.portrait .hair i:nth-of-type(8)::before {
+  width: 19vmin;
+  height: 10vmin;
+  background: #000;
+  border-top-right-radius: 100%;
+  transform: rotate(55deg);
+  top: -2vmin;
+  left: 3vmin;
+}
+.portrait .hair i:nth-of-type(8)::after {
+  width: 19vmin;
+  height: 10vmin;
+  background: #000;
+  border-top-right-radius: 100%;
+  transform: rotate(55deg);
+  top: 1vmin;
+  left: 4vmin;
+}
+.portrait .hair i:nth-of-type(9) {
+  width: 5vmin;
+  height: 15vmin;
+  background: #000;
+  transform: rotate(10deg);
+  top: 50vmin;
+  left: -39vmin;
+}
+.portrait .ear {
+  width: 2vmin;
+  height: 10vmin;
+  background: #1e3fb0;
+  z-index: 3;
+  top: -19.8vmin;
+  left: 30.8vmin;
+  transform: rotate(20deg);
+  border-top-left-radius: 1vmin;
+  border-top-right-radius: 1vmin;
+}
+.portrait .ear::before {
+  width: 1.5vmin;
+  height: 2.5vmin;
+  background: #000;
+  transform: rotate(-20deg);
+  left: 1.75vmin;
+  top: -0.4vmin;
+}
+.portrait .ear i:nth-of-type(1) {
+  width: 2vmin;
+  height: 2vmin;
+  background: #1e3fb0;
+  top: -3.5vmin;
+  left: -3.5vmin;
+  transform: rotate(30deg);
+}
+.portrait .ear i:nth-of-type(1)::before {
+  width: 2.8vmin;
+  height: 8vmin;
+  background: #1e3fb0;
+  transform: rotate(-31deg);
+  left: 3.6vmin;
+  top: -0.4vmin;
+  border-top-right-radius: 1vmin;
+  border-bottom-right-radius: 1.2vmin;
+}
+.portrait .ear i:nth-of-type(1)::after {
+  width: 2.8vmin;
+  height: 8vmin;
+  background: #1e3fb0;
+  transform: rotate(-31deg);
+  left: 2vmin;
+}
+.portrait .ear i:nth-of-type(2) {
+  width: 2vmin;
+  height: 5vmin;
+  background: #1e3fb0;
+  border-top-right-radius: 100%;
+  transform: rotate(5deg) skewY(40deg);
+  top: -1.5vmin;
+  left: 1.2vmin;
+}
+.portrait .earring {
+  width: 5vmin;
+  height: 15vmin;
+  background: transparent;
+  z-index: 3;
+  border: 0.5vmin solid #fff;
+  border-radius: 50%;
+  left: 29vmin;
+  top: 4.4vmin;
+}
+.portrait .face {
+  z-index: 4;
+  width: 20.6vmin;
+  height: 15vmin;
+  background: #1e3fb0;
+  top: -44.8vmin;
+  left: 8.5vmin;
+  border-top-right-radius: 11.6vmin;
+  border-top-left-radius: 1vmin;
+  transform: skewX(-10deg);
+}
+.portrait .face::before {
+  width: 4vmin;
+  height: 15vmin;
+  background: #1e3fb0;
+  border-top-left-radius: 100%;
+  top: 0.5vmin;
+  left: -2.3vmin;
+  transform: rotate(-11deg) skewX(-5deg);
+}
+.portrait .face::after {
+  width: 4vmin;
+  height: 9vmin;
+  background: #1e3fb0;
+  top: 8vmin;
+  left: 18.5vmin;
+  border-top-right-radius: 100%;
+  transform: rotate(3deg) skewY(40deg);
+}
+.portrait .face i:nth-of-type(1) {
+  z-index: 3;
+  width: 4vmin;
+  height: 9vmin;
+  background: #1e3fb0;
+  top: 11vmin;
+  left: 18.8vmin;
+  border-top-right-radius: 100%;
+  transform: skewY(5deg);
+}
+.portrait .face i:nth-of-type(1)::before {
+  width: 2vmin;
+  height: 3.5vmin;
+  background: #1e3fb0;
+  left: 2.2vmin;
+  top: 7vmin;
+  transform: rotate(-7deg);
+}
+.portrait .face i:nth-of-type(1)::after {
+  width: 22vmin;
+  height: 15vmin;
+  background: #1e3fb0;
+  left: -19vmin;
+  top: 7vmin;
+  transform: rotate(-7deg);
+  border-bottom-right-radius: 3vmin;
+}
+.portrait .face i:nth-of-type(2) {
+  z-index: 3;
+  width: 2vmin;
+  height: 12vmin;
+  background: #1e3fb0;
+  left: -21.2vmin;
+  top: 20vmin;
+  transform: rotate(-4deg);
+}
+.portrait .face i:nth-of-type(2)::before {
+  width: 3vmin;
+  height: 7vmin;
+  background: #1e3fb0;
+  top: 8vmin;
+  left: -0.5vmin;
+  transform: rotate(10deg);
+}
+.portrait .face i:nth-of-type(2)::after {
+  width: 3vmin;
+  height: 6.5vmin;
+  background: #1e3fb0;
+  top: 12vmin;
+  left: -1.1vmin;
+  transform: rotate(-10deg) skewX(5deg);
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+.portrait .face i:nth-of-type(3) {
+  z-index: 3;
+  width: 2vmin;
+  height: 4vmin;
+  background: #1e3fb0;
+  left: -21.9vmin;
+  top: 31.5vmin;
+  border-bottom-left-radius: 0.4vmin;
+  transform: rotate(15deg);
+}
+.portrait .face i:nth-of-type(3)::before {
+  width: 1.5vmin;
+  height: 12vmin;
+  background: #1e3fb0;
+  top: 4vmin;
+  left: 4.6vmin;
+  transform: rotate(-49deg) skewX(2deg);
+  border-top-left-radius: 100%;
+}
+.portrait .face i:nth-of-type(3)::after {
+  width: 20vmin;
+  height: 4vmin;
+  background: #1e3fb0;
+  top: 4.4vmin;
+  left: 3.5vmin;
+  transform: rotate(-15deg) skewX(30deg);
+}
+.portrait .face i:nth-of-type(4) {
+  z-index: 3;
+  width: 4vmin;
+  height: 4vmin;
+  background: #1e3fb0;
+  top: 33.4vmin;
+  left: 19.7vmin;
+  transform: skewX(-10deg);
+}
+.portrait .face i:nth-of-type(4)::before {
+  width: 4vmin;
+  height: 8vmin;
+  background: #1e3fb0;
+  transform: skew(15deg) rotate(35deg) skewY(30deg);
+  border-top-right-radius: 4vmin;
+  left: 0.3vmin;
+  top: 3vmin;
+}
+.portrait .face i:nth-of-type(4)::after {
+  width: 1vmin;
+  height: 3vmin;
+  background: #1e3fb0;
+  transform: skew(15deg) rotate(35deg) skewY(30deg);
+  left: 2.5vmin;
+  top: 2.5vmin;
+}
+.portrait .eyebrow-left {
+  width: 5vmin;
+  height: 1.2vmin;
+  background: #000;
+  z-index: 5;
+  top: -36.3vmin;
+  left: -13vmin;
+  transform: rotate(15deg) skewX(40deg);
+  border-bottom-right-radius: 0.5vmin;
+}
+.portrait .eyebrow-left::before {
+  width: 3vmin;
+  height: 0.3vmin;
+  background: #1e3fb0;
+  transform: rotate(-4deg) skewX(-40deg);
+  top: -0.1vmin;
+  left: 0.75vmin;
+}
+.portrait .eye {
+  width: 6vmin;
+  height: 4.4vmin;
+  background: #000;
+  z-index: 5;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  top: -29.2vmin;
+  left: -14.5vmin;
+  transform: rotate(-15deg);
+}
+.portrait .eye::before {
+  width: 5vmin;
+  height: 3.8vmin;
+  background: #1e3fb0;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  left: 0.95vmin;
+  top: 0.8vmin;
+  transform: rotate(-5deg);
+}
+.portrait .eye::after {
+  width: 2.7vmin;
+  height: 2.7vmin;
+  background: #000;
+  border-radius: 50%;
+  left: 1.85vmin;
+  top: 1.2vmin;
+  transform: rotate(-2deg);
+}
+.portrait .eye i:nth-of-type(1) {
+  width: 4vmin;
+  height: 4vmin;
+  background: #000;
+  transform: rotate(20deg);
+  left: -7vmin;
+  top: -2vmin;
+  z-index: 6;
+}
+.portrait .eye i:nth-of-type(1)::after {
+  width: 2.4vmin;
+  height: 1vmin;
+  background: #1e3fb0;
+  transform: rotate(-2deg);
+  left: 4.8vmin;
+  top: 3.2vmin;
+}
+.portrait .eyebrow-right {
+  width: 6.8vmin;
+  height: 1.2vmin;
+  background: #000;
+  z-index: 5;
+  top: -36.7vmin;
+  left: 14.6vmin;
+  transform: rotate(-15deg) skewX(-40deg);
+  border-bottom-left-radius: 0.5vmin;
+}
+.portrait .eyebrow-right::before {
+  width: 7.5vmin;
+  height: 0.6vmin;
+  background: #1e3fb0;
+  transform: rotate(5deg) skewX(40deg);
+  top: -0.4vmin;
+  left: -0.4vmin;
+}
+.portrait .eyebrow-right::after {
+  width: 3vmin;
+  height: 0.6vmin;
+  background: #000;
+  left: 6.6vmin;
+  top: 1.1vmin;
+  transform: rotate(25deg);
+}
+.portrait .eyebrow-right i:nth-of-type(1) {
+  z-index: 6;
+  width: 3.8vmin;
+  height: 0.5vmin;
+  background: #1e3fb0;
+  transform: rotate(30deg) skewX(40deg);
+  top: 0.9vmin;
+  left: 6.2vmin;
+}
+.portrait .eyebrow-right i:nth-of-type(1)::before {
+  width: 2vmin;
+  height: 0.5vmin;
+  background: #1e3fb0;
+  top: 0.1vmin;
+  left: 2vmin;
+  transform: rotate(7deg);
+}
+.portrait .eye-right {
+  left: 15vmin;
+  top: -29.2vmin;
+  transform: rotate(22deg) scaleX(-1);
+}
+.portrait .eye-right i:nth-of-type(1) {
+  background: transparent;
+}
+.portrait .nose {
+  width: 1.45vmin;
+  height: 0.8vmin;
+  background: #000;
+  z-index: 6;
+  top: -10.7vmin;
+  left: -3.8vmin;
+  border-top-right-radius: 1vmin;
+  border-top-left-radius: 0.8vmin;
+  border-bottom-left-radius: 0.5vmin;
+}
+.portrait .nose::before {
+  width: 1.2vmin;
+  height: 0.8vmin;
+  background: #fff;
+  left: 0.4vmin;
+  top: 0.3vmin;
+  border-top-left-radius: 0.6vmin;
+}
+.portrait .nose-right {
+  left: 2.8vmin;
+  transform: scaleX(-1);
+}
+.portrait .nose-right::before {
+  top: 0.4vmin;
+  background: #1e3fb0;
+}
+.portrait .mouth {
+  width: 8vmin;
+  height: 3vmin;
+  background: #000;
+  z-index: 6;
+  left: -0.2vmin;
+  top: 1.7vmin;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.portrait .mouth::before {
+  width: 0;
+  height: 0;
+  border-top: 1.1vmin solid transparent;
+  border-left: 1.3vmin solid #000;
+  border-bottom: 1.1vmin solid transparent;
+  left: 7.9vmin;
+  top: -0.3vmin;
+}
+.portrait .mouth::after {
+  width: 0;
+  height: 0;
+  border-top: 1.1vmin solid transparent;
+  border-right: 1.3vmin solid #1e3fb0;
+  border-bottom: 1.1vmin solid transparent;
+  left: -1.2vmin;
+  top: -0.3vmin;
+}
+.portrait .mouth i:nth-of-type(1) {
+  width: 4vmin;
+  height: 1.8vmin;
+  background: #1e3fb0;
+  border-top-right-radius: 3.5vmin;
+  left: -4.4vmin;
+  top: -4.1vmin;
+  transform: rotate(-40deg);
+}
+.portrait .mouth i:nth-of-type(1)::before {
+  width: 4vmin;
+  height: 1.8vmin;
+  background: #000;
+  border-top-left-radius: 3.5vmin;
+  transform: rotate(78deg);
+  left: 3.2vmin;
+  top: 2.6vmin;
+}
+.portrait .mouth i:nth-of-type(1)::after {
+  width: 6.8vmin;
+  height: 2.4vmin;
+  background: #1e3fb0;
+  transform: rotate(43deg);
+  left: -1.7vmin;
+  top: 2.5vmin;
+  border-radius: 50%;
+}
+.portrait .mouth i:nth-of-type(2) {
+  width: 2.3vmin;
+  height: 2.3vmin;
+  background: #1e3fb0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  left: 3.4vmin;
+  top: 0.7vmin;
+  transform: rotate(-5deg);
+}
+.portrait .mouth i:nth-of-type(2)::before {
+  width: 1.5vmin;
+  height: 1vmin;
+  background: #1e3fb0;
+  transform: rotate(5deg);
+  left: -0.2vmin;
+  top: -0.1vmin;
+}
+.portrait .mouth i:nth-of-type(2)::after {
+  width: 1.2vmin;
+  height: 1vmin;
+  background: #1e3fb0;
+  left: -5vmin;
+  top: -0.7vmin;
+}
+.portrait .mouth i:nth-of-type(3) {
+  width: 2vmin;
+  height: 1vmin;
+  background: #000;
+  top: -3vmin;
+  left: 1vmin;
+}
+.portrait .mouth i:nth-of-type(3)::before {
+  width: 4.4vmin;
+  height: 1vmin;
+  background: #1e3fb0;
+  transform: rotate(-22deg);
+  left: -1.9vmin;
+  top: -0.65vmin;
+  border-top-right-radius: 1vmin;
+  border-bottom-right-radius: 1vmin;
+}
+.portrait .mouth i:nth-of-type(3)::after {
+  width: 2vmin;
+  height: 0.8vmin;
+  background: #1e3fb0;
+  transform: rotate(-15deg);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  left: 0.4vmin;
+  top: -1.3vmin;
+}
+.portrait .mouth i:nth-of-type(4) {
+  width: 1vmin;
+  height: 1.1vmin;
+  background: #1e3fb0;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 100%;
+  top: -5.6vmin;
+  left: 2.8vmin;
+  transform: rotate(10deg);
+}
+.portrait .shadow-right {
+  z-index: 5;
+  top: 34.7vmin;
+  left: 8.5vmin;
+  width: 4.75vmin;
+  height: 4.75vmin;
+  background: #fff;
+  position: relative;
+  border-top-right-radius: 30%;
+  transform: rotate(-2deg) skewX(-30deg) scale(1, 0.866);
+}
+.portrait .shadow-right::before {
+  width: 4.75vmin;
+  height: 4.75vmin;
+  background: #fff;
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
+  border-top-right-radius: 30%;
+}
+.portrait .shadow-right::after {
+  width: 4.75vmin;
+  height: 4.75vmin;
+  background: #fff;
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+  border-top-right-radius: 30%;
+}
+.portrait .shadow-right-top {
+  z-index: 5;
+  width: 7.5vmin;
+  height: 1.2vmin;
+  background: #1e3fb0;
+  top: -23.5vmin;
+  left: 14.5vmin;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: rotate(-2deg);
+}
+.portrait .shadow-left {
+  z-index: 5;
+  width: 11.3vmin;
+  height: 16vmin;
+  background: #fff;
+  left: -3.8vmin;
+  top: 1.2vmin;
+  border-radius: 45%;
+  transform: rotate(-6deg);
+}
+.portrait .shadow-left::before {
+  width: 2vmin;
+  height: 13vmin;
+  background: #fff;
+  top: -9vmin;
+  left: 5.3vmin;
+  transform: rotate(38deg);
+  border-top-right-radius: 70%;
+}
+.portrait .shadow-left::after {
+  width: 1.5vmin;
+  height: 10vmin;
+  background: #fff;
+  left: 8.5vmin;
+  top: -7.9vmin;
+  transform: rotate(5deg);
+  border-top-left-radius: 70%;
+}
+.portrait .shadow-left i:nth-of-type(1) {
+  z-index: 5;
+  width: 1.02vmin;
+  height: 1.1vmin;
+  background: #fff;
+  border-radius: 50%;
+  top: -31.6vmin;
+  left: 8.6vmin;
+}
+.portrait .shadow-left i:nth-of-type(1)::before {
+  width: 3vmin;
+  height: 5.8vmin;
+  background: #fff;
+  top: 3.5vmin;
+  left: -3vmin;
+  transform: rotate(25deg);
+  border-top-right-radius: 2vmin;
+}
+.portrait .shadow-left i:nth-of-type(1)::after {
+  width: 2vmin;
+  height: 2vmin;
+  background: #1e3fb0;
+  top: 9.9vmin;
+  left: -1.8vmin;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.portrait .shadow-left i:nth-of-type(2) {
+  z-index: 5;
+  width: 3vmin;
+  height: 1vmin;
+  background: #1e3fb0;
+  top: -13vmin;
+  left: 7vmin;
+  transform: rotate(-45deg);
+}
+.portrait .shadow-left i:nth-of-type(2)::before {
+  width: 3vmin;
+  height: 1vmin;
+  background: #1e3fb0;
+  top: -0.1vmin;
+  left: 0.9vmin;
+  transform: rotate(-22deg);
+}
+.portrait .shadow-left i:nth-of-type(2)::after {
+  width: 4vmin;
+  height: 2.2vmin;
+  background: #1e3fb0;
+  transform: rotate(-100deg);
+  top: 1.6vmin;
+  left: -1.2vmin;
+}
+.portrait .shadow-left i:nth-of-type(3) {
+  z-index: 5;
+  width: 3.5vmin;
+  height: 5vmin;
+  background: #1e3fb0;
+  top: -3vmin;
+  left: 9vmin;
+}
+.portrait .shadow-left i:nth-of-type(3)::before {
+  width: 2vmin;
+  height: 2.3vmin;
+  background: #fff;
+  left: -1.2vmin;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.portrait .shadow-left i:nth-of-type(3)::after {
+  width: 4vmin;
+  height: 4vmin;
+  background: #1e3fb0;
+  transform: rotate(32deg);
+  top: 3.3vmin;
+  left: -0.6vmin;
+}
+.portrait .shadow-left i:nth-of-type(4) {
+  z-index: 5;
+  width: 2vmin;
+  height: 5vmin;
+  background: #1e3fb0;
+  left: 9.8vmin;
+  top: 9.5vmin;
+}
+.portrait .shadow-left i:nth-of-type(4)::before {
+  width: 1vmin;
+  height: 2.8vmin;
+  background: #fff;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: 1.05vmin;
+  left: -0.65vmin;
+  transform: rotate(5deg);
+}
+.portrait .body {
+  width: inherit;
+  height: 13.5vmin;
+  background: #1e3fb0;
+  top: 59vmin;
+  border-top-right-radius: 11vmin;
+  border-top-left-radius: 8vmin;
+}
+.portrait .body::before {
+  width: inherit;
+  height: 14vmin;
+  background: #fff;
+  border-top-right-radius: 12.8vmin;
+  border-top-left-radius: 8vmin;
+  top: -2.2vmin;
+  left: -2.4vmin;
+}
+.portrait .body::after {
+  width: 12vmin;
+  height: 26vmin;
+  background: #1e3fb0;
+  top: -10.5vmin;
+  left: 27vmin;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: rotate(18deg);
+}
+.portrait .body i:nth-of-type(1) {
+  z-index: 2;
+  width: 23vmin;
+  height: 13.8vmin;
+  background: #1e3fb0;
+  top: -40.3vmin;
+}
+.portrait .body i:nth-of-type(1)::before {
+  width: 2.7vmin;
+  height: 2.7vmin;
+  background: #fff;
+  border-radius: 50%;
+  left: 13.9vmin;
+  top: 12.2vmin;
+}
+.portrait .body i:nth-of-type(1)::after {
+  width: 1vmin;
+  height: 3vmin;
+  background: #fff;
+  left: 16.1vmin;
+  top: 12.2vmin;
+  transform: rotate(-45deg);
+}
+.portrait .body i:nth-of-type(2) {
+  z-index: 2;
+  width: 25vmin;
+  height: 8vmin;
+  background: #1e3fb0;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  top: -23vmin;
+  left: 31vmin;
+  transform: rotate(26deg);
+}
+.portrait .body i:nth-of-type(2)::before {
+  width: 15vmin;
+  height: 5vmin;
+  background: #fff;
+  transform: rotate(-26deg);
+  left: 13vmin;
+  top: 5vmin;
+}
+.portrait .body i:nth-of-type(2)::after {
+  width: 14vmin;
+  height: 5vmin;
+  background: #1e3fb0;
+  left: 11.4vmin;
+  top: 1.8vmin;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  transform: rotate(-26deg);
+}
+.portrait .clothes {
+  width: inherit;
+  height: 13vmin;
+  background: #1e3fb0;
+  top: 82vmin;
+  overflow: hidden;
+}
+.portrait .clothes::before {
+  width: 30vmin;
+  height: 13vmin;
+  background: #000;
+}
+.portrait .clothes::after {
+  width: 10vmin;
+  height: 13vmin;
+  background: #000;
+  right: 0;
+}
+.portrait .clothes i:nth-of-type(1) {
+  width: 14vmin;
+  height: 7vmin;
+  background: #1e3fb0;
+  top: 5vmin;
+  left: -14vmin;
+  border-top-left-radius: 100%;
+  transform: rotate(-25deg);
+  left: -18.2vmin;
+}
+.portrait .clothes i:nth-of-type(1)::before {
+  width: 14vmin;
+  height: 7vmin;
+  background: #000;
+  border-bottom-right-radius: 100%;
+  top: -6vmin;
+  left: 5vmin;
+  transform: rotate(5deg);
+}
+.portrait .clothes i:nth-of-type(2) {
+  width: 1.2vmin;
+  height: 1.2vmin;
+  background: #1e3fb0;
+  left: 69.3vmin;
+  top: 5.3vmin;
+  z-index: 2;
+  border-radius: 50%;
+}
+.portrait .clothes i:nth-of-type(2)::before {
+  width: 1.8vmin;
+  height: 10vmin;
+  background: #1e3fb0;
+  top: -9.5vmin;
+  left: -0.85vmin;
+  transform: rotate(-2deg);
+  border-bottom-left-radius: 0.5vmin;
+}
+.portrait .clothes i:nth-of-type(2)::after {
+  width: 1vmin;
+  height: 8vmin;
+  background: #1e3fb0;
+  top: -5.65vmin;
+  left: -2.9vmin;
+  transform: rotate(-50.5deg);
+  border-bottom-left-radius: 0.5vmin;
+}
+.portrait .clothes i:nth-of-type(3) {
+  width: 10vmin;
+  height: 5.5vmin;
+  background: #1e3fb0;
+  z-index: 2;
+  left: 58vmin;
+  top: -7.5vmin;
+}
+.portrait .clothes i:nth-of-type(3)::before {
+  width: 2.7vmin;
+  height: 4.5vmin;
+  background: #1e3fb0;
+  left: 7vmin;
+  top: 3.5vmin;
+  transform: rotate(-50deg);
+}
+.portrait .clothes i:nth-of-type(3)::after {
+  width: 1.5vmin;
+  height: 8vmin;
+  background: #1e3fb0;
+  top: 4.5vmin;
+  left: 2.6vmin;
+  transform: rotate(-10deg);
+}
+.portrait .clothes i:nth-of-type(4) {
+  width: 1.7vmin;
+  height: 1.7vmin;
+  background: #000;
+  z-index: 2;
+  border-radius: 50%;
+  left: 56.8vmin;
+  top: -1.3vmin;
+}
