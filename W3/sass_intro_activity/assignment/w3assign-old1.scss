@@ -2,7 +2,6 @@
 
 // varialbles
 // fonts
-// Awesome use of variables. This is what I like to see.
 $font-body-copy: Helvetica, Arial, sans-serif;
 $font-headline: 'Lora', serif;
 $font-size: 15px;
@@ -23,14 +22,12 @@ $active-color: $light-orange;
 $break-medium: 600px;
 
 // mixin blocks
-// Good use of a mixin.
 @mixin headline-font {
 	font-family: $font-headline;
 	font-weight: $bold-value;
 }
 
 
-// This mixin is great as well.
 @mixin breakpoint($break) {
   @if $break == medium {
     @media (min-width: $break-medium) {@content;}
@@ -38,22 +35,15 @@ $break-medium: 600px;
   @else if $break == small {
     @media (min-width: $break-small) {@content;}
   } @else {
-		// Indentation is off.  -C.K. Got it.
-  	@media ($break) { @content;}
+  @media ($break) { @content;}
   }
 }
-
 
 body {
 	font-family: $font-body-copy;
   font-size: 15px;
-	// You probably want to do `> div` otherwise it is going to make all div's have these css rules.
-	// This is because all divs are children of the body tag. I know that there is only one div in this
-	// case, but it is good to think ahead. It could create problems in a differnt scenario, or if you
-	// change the code in the future. Good to develop good habbits.
-	// C.K. Great advice.
-  > div {
-    @include breakpoint(medium) {
+  div {
+    @include breakpoint(medium) { 
       display: grid;
 			grid-template-columns: 28% 72%;
      }
@@ -61,13 +51,12 @@ body {
 }
 
 
-// Nesting looks good. There are some things that could be cleaned up.
 header {
 	text-align: right;
 	background-color: $accent-background-color;
 	margin: 0;
   padding: 26px 38px;
-  @include breakpoint(medium) {
+  @include breakpoint(medium) {    
 		grid-column: 1 / 2;
 		padding: 26px 40px;
   }
@@ -96,14 +85,6 @@ nav {
 			list-style-type: none;
 		}
 	}
-	// It seems like this could be move up into the other li rule.
-	// li {
-	// 	padding-bottom: 15px;
-	// 	list-style-type: none;
-	// 	&:last-of-type {
-	// 		padding-bottom: 0;
-	// 	}
-	// }
 	li {
 		&:last-of-type {
 			padding-bottom: 0;
@@ -129,13 +110,13 @@ h1 {
   @include headline-font();
   @include breakpoint(medium) { margin-left: 25px; }
 }
-h2 {
+h2 {	
 	@include headline-font();
 }
 main {
 	padding: 20px 3px 20px 5px;
   background-color: $background-color;
-  @include breakpoint(medium) {
+  @include breakpoint(medium) {    
 		grid-column: 2 / 3;
 		padding: 20px 30px 30px 30px;
   }
@@ -154,12 +135,12 @@ div {
 }
 
 section {
-	a {		 
-		color: black;
-		text-decoration: none;
-		&:hover {		// I would probably move these rules before the &:hover. It is more readable that way. C.K. - moved
+	a {
+		&:hover {
 			text-decoration: underline;
 		}
+		color: black;
+		text-decoration: none;
 		&:visited {
 			color: black;
 			text-decoration: none;
@@ -180,7 +161,7 @@ section {
 		}
 	}
 	h2 {
-    @include breakpoint(medium) {
+    @include breakpoint(medium) { 
 			margin-bottom: 10px;
 			padding-bottom: 35px;
 		}
@@ -206,7 +187,7 @@ figure {
 	}
 }
 article {
-  @include breakpoint(medium) {
+  @include breakpoint(medium) { 
     margin: 18px 40px 35px 40px;
     padding: 30px 40px 30px 40px;
   }

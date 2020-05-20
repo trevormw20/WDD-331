@@ -1,0 +1,28 @@
+ /************** Example A ******************/
+        /** div {
+          background: #36f;
+          margin-bottom: 1em;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          left: 0;
+          transition: left 2s ease-in;
+        }
+        .moved {
+          left: 1000px; 
+        }  */
+
+        /*************** Example B ***************/
+        div {
+          background: #f3f;
+          margin-bottom: 1em;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          left: 0;
+          transition: transform 2s ease-in;
+          transform: translateX(0);
+        }
+        .moved {
+            transform: translateX(1000px);
+        } 
