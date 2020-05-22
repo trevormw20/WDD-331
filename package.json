@@ -1,0 +1,19 @@
+{
+  "name": "wdd331",
+  "version": "1.0.0",
+  "description": "Class projects directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craigkehl/WDD-331.git"
+  },
+  "author": "Craig Kehl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craigkehl/WDD-331/issues"
+  },
+  "homepage": "https://github.com/craigkehl/WDD-331#readme"
+}

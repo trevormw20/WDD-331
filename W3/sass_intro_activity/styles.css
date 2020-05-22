@@ -1,14 +1,16 @@
 /* GLobal styles */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: darkred;
   font-size: 16px;
 }
-
+s
 #contactform {
   background-color: burlywood;
 }
@@ -17,11 +19,12 @@ body {
   background-color: antiquewhite;
 }
 
-#contactform input, #contactform textarea {
+#contactform input,
+#contactform textarea {
   background-color: antiquewhite;
   -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -ms-flex: 2;
+  flex: 2;
 }
 
 @media (min-width: 31em) {
@@ -42,44 +45,51 @@ body {
   }
 }
 
-#contactform fieldset > div {
+#contactform fieldset>div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 
-#contactform fieldset > div label {
+#contactform fieldset>div label {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   text-align: left;
 }
 
 @media (min-width: 31em) {
-  #contactform fieldset > div {
+  #contactform fieldset>div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: row nowrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-            flex-flow: row nowrap;
+    flex-flow: row nowrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin-bottom: 1em;
   }
-  #contactform fieldset > div label {
+
+  #contactform fieldset>div label {
     text-align: right;
     margin-right: 1em;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: white;
 }
+
 /*# sourceMappingURL=styles.css.map */
